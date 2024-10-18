@@ -1,24 +1,17 @@
 import {Injectable} from '@angular/core';
-import {
-  ActivatedRouteSnapshot,
-  CanActivate,
-  CanActivateChild,
-  CanDeactivate,
-  CanLoad,
-  Router,
-  RouterStateSnapshot
-} from '@angular/router';
+import {ActivatedRouteSnapshot, Router, RouterStateSnapshot} from '@angular/router';
 import {AuthService} from '../services/auth.service';
 import {ProudctRatingComponent} from '../components/proudct-rating/proudct-rating.component';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate, CanActivateChild, CanDeactivate<ProudctRatingComponent>, CanLoad {
+export class AuthGuard {
   constructor(private authService: AuthService, private router: Router) {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    console.log(state.url);
     if (this.authService.isAuthenticatedUser()) {
       return true;
     } else {
@@ -29,6 +22,7 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanDeactivate<P
   }
 
   canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    console.log(state.url);
     if (this.authService.isAuthenticatedUser()) {
       return true;
     } else {
