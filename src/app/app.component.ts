@@ -9,11 +9,15 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-guards';
-  
+
   constructor(private authService: AuthService, private router : Router) {}
 
   logout(): void {
     this.authService.logout();
     this.router.navigate(['/login']);
+  }
+
+  showLogin(): boolean {
+    return this.authService.isAuthenticatedUser();
   }
 }
