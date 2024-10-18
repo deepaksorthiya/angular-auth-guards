@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-guards:build:production"
+              "buildTarget": "angular-guards:build:production"
             },
             "development": {
-              "browserTarget": "angular-guards:build:development"
+              "buildTarget": "angular-guards:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-guards:build"
+            "buildTarget": "angular-guards:build"
           }
         },
         "test": {
