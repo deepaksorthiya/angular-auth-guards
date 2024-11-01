@@ -16,6 +16,7 @@ import { ProudctOffersComponent } from './components/proudct-offers/proudct-offe
 import {FormsModule} from '@angular/forms'
 import { ProductServiceModule } from './modules/product-service/product-service.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({ declarations: [
         AppComponent,
@@ -30,5 +31,5 @@ import { DashboardComponent } from './dashboard/dashboard.component';
         AppRoutingModule,
         ReactiveFormsModule,
         FormsModule,
-        ProductServiceModule], providers: [AuthGuard, provideHttpClient(withInterceptorsFromDi())] })
+        ProductServiceModule], providers: [AuthGuard, provideHttpClient(withInterceptorsFromDi()), provideAnimationsAsync()] })
 export class AppModule { }
