@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-proudct-rating',
-  templateUrl: './proudct-rating.component.html',
-  styleUrls: ['./proudct-rating.component.css']
+    selector: 'app-proudct-rating',
+    templateUrl: './proudct-rating.component.html',
+    styleUrls: ['./proudct-rating.component.css'],
+    standalone: false
 })
 export class ProudctRatingComponent {
   

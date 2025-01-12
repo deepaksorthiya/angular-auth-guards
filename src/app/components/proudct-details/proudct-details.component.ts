@@ -3,9 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
-  selector: 'app-proudct-details',
-  templateUrl: './proudct-details.component.html',
-  styleUrls: ['./proudct-details.component.css']
+    selector: 'app-proudct-details',
+    templateUrl: './proudct-details.component.html',
+    styleUrls: ['./proudct-details.component.css'],
+    standalone: false
 })
 export class ProudctDetailsComponent {
   productDetail? : any;

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-product-service-component',
-  templateUrl: './product-service-component.component.html',
-  styleUrls: ['./product-service-component.component.css']
+    selector: 'app-product-service-component',
+    templateUrl: './product-service-component.component.html',
+    styleUrls: ['./product-service-component.component.css'],
+    standalone: false
 })
 export class ProductServiceComponent implements OnInit {
 
